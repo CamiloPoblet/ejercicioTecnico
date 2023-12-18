@@ -20,7 +20,8 @@ Aplicacion hecha con Springboot 2.5.14 para gestion de usuarios
 
 ### Endpoints: 
 > La aplicacion cuenta con distintos endpoints que representan un metodo de la clase UserController.
-- /api/sign-up : Crea un usuario con un mail no existente en la base de datos h2
+- **/api/sign-up** : 
+    Crea un usuario con un mail no existente en la base de datos h2
 ejemplo de request:
 ```
     (async function createUser() {
@@ -45,11 +46,12 @@ ejemplo de request:
         }
     })(); 
 ```
-> _Puedes correr este fragmento de codigo en javascript desde tu navegador, a traves de la consola para interactuar con la api_
+> _Puedes pegar este fragmento de codigo javascript en tu navegador, a traves de la consola para interactuar con la api_
 
-- /api/login : inicia sesion con un usuario utilizando si mail y constraseña. obtiene un token JWT temporal por 2 minutos 
-ejemplo de request:
+- **/api/login** :
+    inicia sesion con un usuario utilizando si mail y constraseña. obtiene un token JWT temporal por 2 minutos 
 
+Ejemplo de request:
 ```
 (async function loginUser() {
     let user = { "name": "camilo", "email": "usuario@mail.com","password":"Hola12345","phones":[{"number":78799123,"citycode":9,"contrycode":"+56"}] };
@@ -75,14 +77,14 @@ ejemplo de request:
     }
 })();
 ```
-> _Puedes correr este fragmento de codigo en javascript desde tu navegador, a traves de la consola para interactuar con la api_
+> _Puedes pegar este fragmento de codigo javascript en tu navegador, a traves de la consola para interactuar con la api_
 
-## Prerequisitos
+# Prerequisitos
 Java 11
-## Iniciando el proyecto
+# Iniciando el proyecto
 
-# Clonar Repositorio
+## Clonar Repositorio
 git clone [https://github.com/yourusername/your-repository.git](https://github.com/CamiloPoblet/ejercicioTecnico.git)
 
-# Iniciar Proyecto
+## Iniciar Proyecto
 Ejecutar RunProject.bat , este batch realiza una build con gradle y ejecuta el jar resultante, mientras el batch este abierto la aplicacion estara corriendo y se podra interactuar con ella
