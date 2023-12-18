@@ -2,19 +2,13 @@
 
 Aplicacion Springboot para creacion,login y obtencion de informacion de usuario.
 
-## Table of Contents
+## Tabla de contenidoa
 
 - [Project Overview](#project-overview)
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [Prerequisites](#prerequisitos)
+- [Iniciando el Proyecto](#iniciando-el-proyecto)
 
-## Project Overview
+# Project Overview
 
 Aplicacion hecha con Springboot 2.5.14 para gestion de usuarios 
 
