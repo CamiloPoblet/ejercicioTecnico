@@ -78,7 +78,8 @@ Java 11
 # Iniciando el proyecto
 
 ## Clonar Repositorio
+```
 git clone [https://github.com/yourusername/your-repository.git](https://github.com/CamiloPoblet/ejercicioTecnico.git)
-
+```
 ## Iniciar Proyecto
 Ejecutar RunProject.bat , este batch realiza una build con gradle y ejecuta el jar resultante, mientras el batch este abierto la aplicacion estara corriendo y se podra interactuar con ella mediante la api
