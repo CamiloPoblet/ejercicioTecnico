@@ -23,29 +23,29 @@ Aplicacion hecha con Springboot 2.5.14 para gestion de usuarios
 - /api/sign-up : Crea un usuario con un mail no existente en la base de datos h2
 ejemplo de request:
 
-´´´ 
-(async function createUser() {
-    let user = { "name": "camilo", "email": "","password":"oaÑ34","phones":[{"number":71786222,"citycode":9,"contrycode":"+56"}] };
-    try {
-        const response = await fetch("http://localhost:8080/api/sign-up", {
-            method: "POST",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(user)
-        });
-        if (response.ok) {
-            const createdUser = await response.json();
-            console.log("User created successfully. Response:", createdUser);
-        } else {
-            console.log("Failed to create user. Response:", response);
+
+    (async function createUser() {
+        let user = { "name": "camilo", "email": "","password":"oaÑ34","phones":[{"number":71786222,"citycode":9,"contrycode":"+56"}] };
+        try {
+            const response = await fetch("http://localhost:8080/api/sign-up", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user)
+            });
+            if (response.ok) {
+                const createdUser = await response.json();
+                console.log("User created successfully. Response:", createdUser);
+            } else {
+                console.log("Failed to create user. Response:", response);
+            }
+        } catch (err) {
+            console.log("An error occurred:", err);
         }
-    } catch (err) {
-        console.log("An error occurred:", err);
-    }
-})(); 
-´´´
+    })(); 
+
 > _Puedes correr este fragmento de codigo en javascript desde tu navegador, a traves de la consola para interactuar con la api_
 
 - /api/login : inicia sesion con un usuario utilizando si mail y constraseña. obtiene un token JWT temporal por 2 minutos 
