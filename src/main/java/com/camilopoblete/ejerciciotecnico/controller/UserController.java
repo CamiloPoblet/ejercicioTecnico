@@ -86,9 +86,10 @@ public class UserController {
         if(null != usuarioExistente) {
             throw new UserCreationException(ErrorCode.USER_ALREADY_EXISTS.getCode(), ErrorCode.USER_ALREADY_EXISTS.getMessage());
         }
-        if(!user.getPassword().matches("^(?=.*[A-Z])(?=.*\\d.*\\d)[A-Za-z\\d]*$")){
+        if(!user.getPassword().matches("^(?=.*[A-Z])(?=.*\\d.*\\d)[A-Za-z\\d]*{8,12}$")){
             throw new UserCreationException(ErrorCode.INVALID_PASSWORD_FORMAT.getCode(), ErrorCode.INVALID_PASSWORD_FORMAT.getMessage());
         }
+
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
         user.setActive(true);
