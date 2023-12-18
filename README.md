@@ -22,9 +22,9 @@ Aplicacion hecha con Springboot 2.5.14 para gestion de usuarios
 > La aplicacion cuenta con distintos endpoints que representan un metodo de la clase UserController.
 - /api/sign-up : Crea un usuario con un mail no existente en la base de datos h2
 ejemplo de request:
-{
+```
     (async function createUser() {
-        let user = { "name": "camilo", "email": "","password":"oaÑ34","phones":[{"number":71786222,"citycode":9,"contrycode":"+56"}] };
+        let user = { "name": "camilo", "email": "usuario@mail.com","password":"Hola12345","phones":[{"number":78799123,"citycode":9,"contrycode":"+56"}] };
         try {
             const response = await fetch("http://localhost:8080/api/sign-up", {
                 method: "POST",
@@ -44,14 +44,15 @@ ejemplo de request:
             console.log("An error occurred:", err);
         }
     })(); 
-}
+```
 > _Puedes correr este fragmento de codigo en javascript desde tu navegador, a traves de la consola para interactuar con la api_
 
 - /api/login : inicia sesion con un usuario utilizando si mail y constraseña. obtiene un token JWT temporal por 2 minutos 
 ejemplo de request:
-´´´
+
+```
 (async function loginUser() {
-    let user = { "name": "camilo", "email": "camilo@mal.com","password":"oa34","phones":[{"number":71786222,"citycode":9,"contrycode":"+56"}] };
+    let user = { "name": "camilo", "email": "usuario@mail.com","password":"Hola12345","phones":[{"number":78799123,"citycode":9,"contrycode":"+56"}] };
 
     try {
         const response = await fetch("http://localhost:8080/api/login", {
@@ -73,7 +74,7 @@ ejemplo de request:
         console.log("An error occurred:", err);
     }
 })();
-´´´
+```
 > _Puedes correr este fragmento de codigo en javascript desde tu navegador, a traves de la consola para interactuar con la api_
 
 ## Prerequisitos
